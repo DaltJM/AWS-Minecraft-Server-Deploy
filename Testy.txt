@@ -1,1 +1,11 @@
 Test for repo.
+
+Git commit and push workflow.
+
+1. Make changes to project.
+2. Open GitKraken.
+3. Stage files with changes.
+4. Add a commit message.
+5. Commit.
+6. Push.
+If unsure, check GitHub to see if changes have been made.
