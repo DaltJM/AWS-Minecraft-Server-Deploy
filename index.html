@@ -21,6 +21,7 @@
 
   <style id="compiled-css" type="text/css">
       <style>
+
 #banner {
   position: absolute;
   top: 0px;
@@ -33,15 +34,13 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 75%;
 }
 img {
     height: auto;
-    width: auto;
+    width: 75%;
 }
-.green-background {
-  background-color: green;
-}
+
 body {
 background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -53,48 +52,30 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 background-color: #131313;
 background-size: 20px 20px;
 }
-#Minecraft-banner {
-  
-}
-#Navigation-Text {
-  word-spacing: 60px;
-  font-size: 30px;
-  font-family: sans-serif;
-  
-}
-.Navigation-Border {
-  border-color: gray;
-  border-width: 8px;
-  border-style: solid;
-}
-.test-style {
-  color: red;
-}
-
-.topnav {
+.navbar {
   background-color: #333;
-  overflow: hidden;
+  
 }
 
 
-.topnav a {
+.navbar a {
   float: left;
   color: #fff;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
 
 
-.topnav a.active {
+.navbar a.active {
   background-color: #4CAF50;
   color: white;
 }
 
 .dropbtn {
-  background-color: gray;
+  background-color: #1F1F1F;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -117,7 +98,7 @@ background-size: 20px 20px;
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #1F1F1F;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -125,7 +106,10 @@ background-size: 20px 20px;
 
 
 .dropdown-content a {
-  color: black;
+  float: none;
+  position: relative;
+  text-align: left;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -137,28 +121,64 @@ background-size: 20px 20px;
 .show {
   display:block;
   }
+  
+  #text-style-1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
 </style>
   </style>
 
+
+  
+</head>
+<body>
+    
+<main>
+  <img id="banner" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png" alt="Minecraft banner" width="1000" height="200" class="center" >
+<div class="navbar">
+<a class="dropbtn" href="#home">Home</a>
+ <a class="dropbtn" href="#news">News</a>
+    <a class="dropbtn" href="#contact">Contact</a>
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Products</button>
+  <i class="fa fa-caret-down"></i>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Setup Scripts</a>
+      <a href="#">Setup Service</a>
+    </div>
+   
+  </div>
+</div>
+  <body>
+  <p id="text-style-1">
+  Stuff and things
+  </p>
+  </body>
+</main>
 
   <!-- TODO: Missing CoffeeScript 2 -->
 
   <script type="text/javascript">//<![CDATA[
 
-    window.onload=function(){
-      
+    
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
+console.log("hello")
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
+console.log("goodbye")
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
+  	console.log("test");
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
+    	console.log("hello");
+      console.log(i);
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
@@ -167,38 +187,9 @@ window.onclick = function(event) {
   }
 }
 
-    }
 
   //]]></script>
 
-</head>
-<body>
-    
-<main>
-  <img id="banner" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png" alt="Minecraft banner" width="1000" height="300" class="center" >
-<div class="topnav">
-<a href="#home">Home</a>
-
-  <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Products</button>
-  <i class="fa fa-caret-down"></i>
-    <div id="myDropdown" class="dropdown-content">
-    <a href="#">Setup Scripts</a>
-    <a href="#products">Products</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    </div>
-  </div>
-</div>
-
-  <body>
-  <p>
-  Stuff and things
-  </p>
-  </body>
-</main>
-
-  
   <script>
     // tell the embed parent frame the height of the content
     if (window.parent && window.parent.parent){
