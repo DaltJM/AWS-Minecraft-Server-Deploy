@@ -22,25 +22,16 @@
   <style id="compiled-css" type="text/css">
       <style>
 
-#banner {
-  position: absolute;
-  top: 0px;
-  left: 0px; 
-
-  margin: 0 auto;
-  text-align: center;
+img {
+    height: auto;
+    width: 50%;
 }
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 50%;
 }
-img {
-    height: auto;
-    width: 75%;
-}
-
 body {
 background:
 linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -52,133 +43,96 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 background-color: #131313;
 background-size: 20px 20px;
 }
-.navbar {
-  background-color: #333;
-  
-}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+
+}
 
 .navbar a {
+  
   float: left;
-  color: #fff;
+  font-family: "Arial";
+  font-size: 25px;
+  color: white;
   text-align: center;
-  padding: 15px 16px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
-
-
-
-.navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.dropbtn {
-  background-color: #1F1F1F;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: red;
-}
-
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  float: left;
+  overflow: hidden;
 }
 
+.dropdown .dropbtn {
+  font-size: 25px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #333;
+  font-family: "Arial";
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #1F1F1F;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-
 .dropdown-content a {
   float: none;
-  position: relative;
-  text-align: left;
-  color: white;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown-content a:hover {background-color: red}
-
-.show {
-  display:block;
-  }
-  
-  #text-style-1 {
-  font-size: 30px;
-  font-family: sans-serif;
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+p {
+  font-family: "Times New Roman";
+  Font-size: 30px;
   color: white;
 }
 </style>
   </style>
 
 
-  
-</head>
-<body>
-    
-<main>
-  <img id="banner" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png" alt="Minecraft banner" width="1000" height="200" class="center" >
-<div class="navbar">
-<a class="dropbtn" href="#home">Home</a>
- <a class="dropbtn" href="#news">News</a>
-    <a class="dropbtn" href="#contact">Contact</a>
-  <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Products</button>
-  <i class="fa fa-caret-down"></i>
-    <div class="dropdown-content" id="myDropdown">
-      <a href="#">Setup Scripts</a>
-      <a href="#">Setup Service</a>
-    </div>
-   
-  </div>
-</div>
-  <body>
-  <p id="text-style-1">
-  Stuff and things
-  </p>
-  </body>
-</main>
-
   <!-- TODO: Missing CoffeeScript 2 -->
 
   <script type="text/javascript">//<![CDATA[
 
-    
+    window.onload=function(){
+      
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-console.log("hello")
   document.getElementById("myDropdown").classList.toggle("show");
 }
-console.log("goodbye")
+
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-  	console.log("test");
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
-    	console.log("hello");
-      console.log(i);
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
@@ -187,9 +141,41 @@ window.onclick = function(event) {
   }
 }
 
+    }
 
   //]]></script>
 
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<main>
+<img id="banner" class="center" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png" alt="Minecraft banner">
+<div class="navbar">
+<a href="#home">Home</a>
+<a href="#news">News</a>
+
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Products</button>
+
+  <i class="fa fa-caret-down"></i>
+    <div id="myDropdown" class="dropdown-content">
+    <a href="#">Setup Scripts</a>
+    </div>
+  </div>
+    <a href="#contact">Contact</a>
+</div>
+
+  <body>
+  <p>
+  Stuff and things
+  </p>
+  </body>
+</main>
+
+  
   <script>
     // tell the embed parent frame the height of the content
     if (window.parent && window.parent.parent){
