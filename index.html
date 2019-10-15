@@ -20,9 +20,11 @@
 
 
   <style id="compiled-css" type="text/css">
-      <style>.navbar a.active {
-  background-color: #4CAF50;
-  color: white;
+      
+
+.navbar a.active {
+  background-color: red;
+  color: white !important;
 }
 
 img {
@@ -114,8 +116,8 @@ body {
 }
 
 p {
-  font-family: "Times New Roman";
-  Font-size: 30px;
+  font-family: Times;
+  font-size: 30px;
   color: white;
 }
 
@@ -161,17 +163,17 @@ p {
   }
 
   to {
-    opacity: .4
+    opacity: 0.4;
   }
 }
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -181,11 +183,11 @@ p {
   .prev,
   .next,
   .text {
-    font-size: 11px
+    font-size: 11px;
   }
 }
 
-</style>
+
 
   </style>
 
@@ -302,7 +304,7 @@ function showSlides() {
     if (window.parent && window.parent.parent){
       window.parent.parent.postMessage(["resultsFrame", {
         height: document.body.getBoundingClientRect().height,
-        slug: "jfv5uw8e"
+        slug: "0kx925qs"
       }], "*")
     }
 
