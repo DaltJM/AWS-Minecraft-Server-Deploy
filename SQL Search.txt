@@ -1,0 +1,3 @@
+SELECT charactername, genre, cost FROM Box
+WHERE cost BETWEEN 19 AND 22
+ORDER BY charactername ASC;

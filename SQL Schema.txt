@@ -1,0 +1,26 @@
+create table Box (
+  id integer not null,
+  charactername VARCHAR(100),
+  cost decimal(4,2),
+  type varchar(100),
+  genre varchar(100),
+  primary key (id)
+);
+ 
+insert into Box values (1, "Goku", "19.00", "Limited Edition", "Anime");
+insert into Box values (2, "Vegeta", "19.00", "Standard", "Anime");
+insert into Box values (3, "Sombra", "22.00", "Glow-In-The-Dark", "Games");
+insert into Box values (4, "Winston","35.00", "Standard", "Games");
+insert into Box values (5, "Light", "19.00", "SDCC Exclusive", "Anime");
+insert into Box values (6, "L", "19.00", "Standard", "Anime");
+
+create table Licensee (
+  Licensee_id integer not null auto_increment,
+  LicenseeName varchar(100),
+  primary key (licensee_id)
+  );
+ 
+ insert into Licensee values (null, "Funimation");
+ insert into licensee values (null, "Blizzard");
+ insert into licensee values (null, "Toei Animation");
+   
