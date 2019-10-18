@@ -1,11 +1,16 @@
-
+.bg-color {
+    background-color: #333;
+}
       
 
 .navbar a.active {
   background-color: red;
   color: white !important;
 }
-
+#active2 {
+    background-color: red;
+    color: white !important;
+}
 img {
   height: auto;
   width: 50%;
@@ -94,12 +99,17 @@ body {
   display: block;
 }
 
-p {
+ .abouttext {
   font-family: Times;
   font-size: 30px;
   color: white;
 }
-
+ #abouttext2 {
+text-align:center;
+  font-family: Times;
+  font-size: 25px;
+  color: white;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
