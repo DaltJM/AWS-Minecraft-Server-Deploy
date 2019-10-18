@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <link rel="stylesheet" type="text/css" href="/MyStyle.css">
+</head>
+
+<body>
+    <main>
+        <img id="banner" class="center" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png"
+            alt="Minecraft banner">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a class="active" href="#news">News</a>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Products</button>
+
+                <i class="fa fa-caret-down"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Setup Scripts</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </main>
+    <p class="AboutText">
+        This is where news will be.
+
+    </p>
+    </head>
+
+</html>
+
+
+
+<script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent) {
+        window.parent.parent.postMessage(["resultsFrame", {
+            height: document.body.getBoundingClientRect().height,
+            slug: "0kx925qs"
+        }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+</script>
