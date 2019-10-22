@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
     <link rel="stylesheet" type="text/css" href="/MyStyle.css">
 </head>
 
@@ -25,25 +25,13 @@
             <a href="http://retdev.dalton/contact.html">Contact</a>
         </div>
     </main>
-    <p class="AboutText">
+    <p id="AboutText2" class="bg-color">
         This is where news will be.
 
     </p>
     </head>
+    <footer>
+        <script src="MyScript.js"></script>
+    </footer>
 
 </html>
-
-
-
-<script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent) {
-        window.parent.parent.postMessage(["resultsFrame", {
-            height: document.body.getBoundingClientRect().height,
-            slug: "0kx925qs"
-        }], "*")
-    }
-
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-</script>
