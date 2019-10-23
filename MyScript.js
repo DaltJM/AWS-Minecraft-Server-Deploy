@@ -48,5 +48,8 @@ if (window.parent && window.parent.parent) {
     }], "*")
 }
 
-// always overwrite window.name, in case users try to set it manually
-window.name = "result"
+
+
+function PopupBox() {
+    var mywindow = window.open("JSExperiment.html", "How Did You Get Here!?", "width=1080,height=720");
+}

@@ -176,4 +176,9 @@ text-align:center;
     font-size: 11px;
   }
 }
-
+.JSButton {
+  color: white;
+  color: transparent; 
+  background-color: transparent; 
+  border: none;
+}
