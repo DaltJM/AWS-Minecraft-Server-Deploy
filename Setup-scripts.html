@@ -1,50 +1,131 @@
-<link rel="stylesheet" type="text/css" href="/MyStyle.css">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Minecraft Website 2</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" type="text/css" href="/MyStyle.css">
 
 
 
 
-<!-- TODO: Missing CoffeeScript 2 -->
+    <!-- TODO: Missing CoffeeScript 2 -->
 
 
 
 </head>
+<main>
+    <img id="banner" class="center" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png"
+        alt="Minecraft banner">
+    <div class="navbar">
+        <a href="http://retdev.dalton/index.html">Home</a>
+        <a href="http://retdev.dalton/news.html">News</a>
 
-<body>
-    <!DOCTYPE html>
-    <html>
+        <div class="dropdown">
+            <button onclick="myFunction()" id="active2" class="dropbtn">Products</button>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <main>
-            <img id="banner" class="center" src="http://pngimg.com/uploads/minecraft/minecraft_PNG42.png"
-                alt="Minecraft banner">
-            <div class="navbar">
-                <a href="http://retdev.dalton/index.html">Home</a>
-                <a href="http://retdev.dalton/news.html">News</a>
-
-                <div class="dropdown">
-                    <button onclick="myFunction()" id="active2" class="dropbtn">Products</button>
-
-                    <i class="fa fa-caret-down"></i>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a class="active" href="http://retdev.dalton/setup-scripts.html">Setup Scripts</a>
-                        <a href="https://aws.amazon.com" target="_Blank">AWS</a>
-                    </div>
-                </div>
-                <a href="http://retdev.dalton/about.html">About</a>
-                <a href="http://retdev.dalton/contact.html">Contact</a>
+            <i class="fa fa-caret-down"></i>
+            <div id="myDropdown" class="dropdown-content">
+                <a class="active" href="http://retdev.dalton/setup-scripts.html">Setup Scripts</a>
+                <a href="https://aws.amazon.com" target="_Blank">AWS</a>
             </div>
-            <p id="AboutText2" class="bg-color">
-                This is where the setup scripts will go.
-                <h2>What Can JavaScript Do?</h2>
-                <button onclick="PopupBox()" class=JSButton>CLICK ME!</button>
-            </p>
-        </main>
-    </head>
-    <footer>
-
         </div>
-        <script src="MyScript.js"></script>
-    </footer>
+        <a href="http://retdev.dalton/about.html">About</a>
+        <a href="http://retdev.dalton/contact.html">Contact</a>
+    </div>
 
-    </html>
+    <body>
+
+        <!-- Cards HTML-->
+        <div class="card-body">
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-text">
+
+                    <h2>Script One</h2>
+                    <p>Script to setup AWS Server. This will help you to setup AWS in a way that will allow you to host
+                        a game server.</p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <!-- <div class="value">4<sup>m</sup></div>-->
+                        <a class="card-links script-1-color" href="/Script1.txt" download="Setup-Script-1">
+                            <div class="type">Download</div>
+                        </a>
+                    </div>
+                    <!--<div class="stat border">
+                        <div class="value">5123</div>
+                        <div class="type">views</div>
+                    </div>
+                     <div class="stat">
+                        <div class="value">32</div>
+                        <div class="type">comments</div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image card2"></div>
+                <div class="card-text card2">
+                    <!--<span class="date">1 week ago</span>-->
+                    <h2>Script Two</h2>
+                    <p>This script will setup a multiplayer Minecraft server. If you want to keep the server vanilla,
+                        only use the first and second scripts.</p>
+                </div>
+                <div class="card-stats card2">
+                    <div class="stat">
+                        <!--<div class="value">7<sup>m</sup></div>-->
+                        <a class="card-links" href="/Script2.txt" download="Setup-Script-1">
+                            <div class="type">Download</div>
+                        </a>
+                    </div>
+                    <!--<div class="stat border">
+                        <div class="value">7152</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value">21</div>
+                        <div class="type">comments</div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image card3"></div>
+                <div class="card-text card3">
+                    <!--<span class="date">3 week ago</span>-->
+                    <h2>Script Three</h2>
+                    <p>This script will provide the settings to install some recommended mods. </p>
+                </div>
+                <div class="card-stats card3">
+                    <div class="stat">
+                        <!--<div class="value">5<sup>m</sup></div>-->
+                        <a class="card-links" href="/Script3.txt" download="Setup-Script-1">
+                            <div class="type">Download</div>
+                        </a> </div>
+                    <!--<div class="stat border">
+                                    <div class="value">3021</div>
+                                    <div class="type">views</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">15</div>
+                                <div class="type">comments</div>
+                            </div>-->
+                </div>
+            </div>
+        </div>
+    </body>
+
+</main>
+<footer>
+
+    </div>
+    <script src="MyScript.js"></script>
+</footer>
+
+</html>
