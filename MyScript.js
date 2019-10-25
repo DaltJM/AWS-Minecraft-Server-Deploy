@@ -1,9 +1,9 @@
 
-
+/* Not related to dropdown box anymore//
 window.onload = function () {
 
     /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
+    toggle between hiding and showing the dropdown content 
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -36,3 +36,4 @@ if (window.parent && window.parent.parent) {
 function PopupBox() {
     var mywindow = window.open("JSExperiment.html", "How Did You Get Here!?", "width=1080,height=720");
 }
+*/
